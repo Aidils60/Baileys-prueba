@@ -108,7 +108,7 @@ export const addTransactionCapability = (
 			const result = await state.get(type, idsRequiringFetch)
 
 			if (!transactionCache[type] && result) { transactionCache[type] ||= {} transactionCache[type] = Object.assign(transactionCache[type]!, result) }
-		}
+		} }
 	return {
 		get: async(type, ids) => {
 			if(inTransaction) {
